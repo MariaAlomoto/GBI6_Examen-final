@@ -156,8 +156,7 @@ tcga_boxplots <- function(dataset){
 ### [0.5 PUNTOS] 2.2 Utilizando la función ```lapply()``` genera la lista ```cancertype_boxplots``` con las gráficas para cada tipo de cancer (cada tipo de dataset). 
 ```{r list_boxplots}
 cancertype_boxplots <-lappy(c("BRCA", "KIPAN", "KIRP", "LUSC", "OV", "UCEC"), tcga_boxplots)
-genes <- c("GATA3", "PTEN","XBP1", "ESR1", "MUC1", "FN1", "GAPDH")
-genes <- combn (genes, m-2, simplify = F)
+
 
 ```
 
@@ -176,6 +175,8 @@ ggsave("boxplot3.png")
 reg_gen_expression<- function(gen) {
   geom_point(df)
 }
+genes <- c("GATA3", "PTEN","XBP1", "ESR1", "MUC1", "FN1", "GAPDH")
+genes <- combn (genes, m-2, simplify = F)
 
 ```
 
